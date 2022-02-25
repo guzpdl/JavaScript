@@ -5,8 +5,17 @@ let producto1 = 0;
 let producto2 = 0;
 
 let userName = prompt("ingrese su nombre")
+let userLastName = prompt("Ingrese su apellido")
 
-let siOno = prompt(`Hola ${userName}. Desesas comprar accesorios de celular?`)
+function saludo(nombre, apellido){
+    alert("Bienvenido a la mejor tienda de accesorios para celular, " + nombre + " " + apellido + "!")
+}
+
+saludo(userName, userLastName)
+
+
+
+let siOno = prompt(`Desesas comprar accesorios de celular?`)
 
 if (siOno == "si") {
     var respuesta1= prompt("Las opciones que tenemos son las siguientes : 1) carcasa. 2) auricular. 3) cargador")
