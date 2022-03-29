@@ -35,6 +35,7 @@ const productos = [producto1, producto2, producto3, producto4, producto5, produc
 for (let i=0; i < carts.length; i++){
     carts[i].addEventListener("click", () => {
         cartNumbers(productos[i]);
+        costoTotalCarrito(productos[i])
     })
 }
 
@@ -97,6 +98,24 @@ function setItems(producto){
 
     
     localStorage.setItem("productosEnCarrito", JSON.stringify(itemsCarrito) )
+}
+
+function costoTotalCarrito(producto) {
+    console.log("El costo de este productos es", producto.precio);
+    let costoCarrito = localStorage.getItem("costoTotalCarrito")
+    
+    console.log("el costo del carrito es", costoCarrito)
+
+    if(costoCarrito != null){
+        costoCarrito = parseInt(costoCarrito)
+        localStorage.setItem("costoTotalCarrito", costoCarrito + producto.precio)
+
+    } else {
+        localStorage.setItem("costoTotalCarrito", producto.precio)
+    }
+
+    
+
 }
 
 
