@@ -101,7 +101,7 @@ function setItems(producto){
 }
 
 function costoTotalCarrito(producto) {
-    console.log("El costo de este productos es", producto.precio);
+    console.log("El costo del productos es", producto.precio);
     let costoCarrito = localStorage.getItem("costoTotalCarrito")
     
     console.log("el costo del carrito es", costoCarrito)
