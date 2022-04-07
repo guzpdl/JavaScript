@@ -36,6 +36,22 @@ for (let i=0; i < carts.length; i++){
     carts[i].addEventListener("click", () => {
         cartNumbers(productos[i]);
         costoTotalCarrito(productos[i])
+
+
+
+        Toastify({
+            text: "Añadiste este producto al carrito",
+            duration: 3000
+        }).showToast();
+
+        // Toastify({
+        //     text: `Añadiste ${producto.nombre} al carrito`,
+        //     duration: 3000
+        // }).showToast();
+
+        
+
+
     })
 }
 
@@ -104,19 +120,23 @@ function costoTotalCarrito(producto) {
     console.log("El costo del productos es", producto.precio);
     let costoCarrito = localStorage.getItem("costoTotalCarrito")
     
-    console.log("el costo del carrito es", costoCarrito)
+    
 
     if(costoCarrito != null){
         costoCarrito = parseInt(costoCarrito)
         localStorage.setItem("costoTotalCarrito", costoCarrito + producto.precio)
+        console.log("cuando clickeo el mismo")
 
     } else {
         localStorage.setItem("costoTotalCarrito", producto.precio)
+        console.log("segunda parte")
     }
+    console.log("el costo del carrito es", costoCarrito)
 
     
 
 }
+
 
 
 onLoadCartNumbers();
