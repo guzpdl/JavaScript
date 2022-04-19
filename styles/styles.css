@@ -821,22 +821,58 @@ footer .copy p {
   padding: 10px;
 }
 
-.carrito-main {
-  text-align: center;
-  margin: 25px;
-  padding: 20px;
+.card {
+  margin: 5px;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+  transition: box-shadow .3s, -webkit-box-shadow .3s;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.carrito-main h2 {
-  margin: 20px;
-  padding: 15px;
+.card h3 {
+  font-size: 15px;
+  margin: 10px;
 }
 
-.carrito-main p a {
-  text-decoration: underline;
+.card p {
+  margin: 5px;
+  font-size: 15px;
 }
 
-.carrito-main p a:hover {
-  color: blue;
+.card:hover {
+  -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.card img {
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+}
+
+.totalCarrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 10px 100px;
 }
 /*# sourceMappingURL=styles.css.map */

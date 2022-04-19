@@ -1,3 +1,5 @@
+// import Toastify from './node_modules/toastify-js/src/toastify.js'
+
 let carts = document.querySelectorAll(".anadir-carrito");
 
 function Producto (idProducto, nombreProducto, stockProducto, precioProducto, descuentoProducto, categoriaProducto, imgProducto, cantidadEnCarrito){
@@ -34,7 +36,7 @@ const productos = [producto1, producto2, producto3, producto4, producto5, produc
 
 for (let i=0; i < carts.length; i++){
     carts[i].addEventListener("click", () => {
-        cartNumbers(productos[i]);
+        numeroCarrito(productos[i]);
         costoTotalCarrito(productos[i])
 
 
@@ -55,11 +57,11 @@ for (let i=0; i < carts.length; i++){
     })
 }
 
-function onLoadCartNumbers(){
+function numeroCarritoEnCarga(){
 
-    let productNumbers = localStorage.getItem("cartNumbers")
-    if (productNumbers){
-        document.querySelector(".icono-carrito span").textContent = productNumbers;
+    let numeroProducto = localStorage.getItem("numeroCarrito")
+    if (numeroProducto){
+        document.querySelector(".icono-carrito span").textContent = numeroProducto;
 
     }
 
@@ -67,18 +69,18 @@ function onLoadCartNumbers(){
 
 
 
-function cartNumbers(producto) {
+function numeroCarrito(producto) {
     
-    let productNumbers = localStorage.getItem("cartNumbers")
+    let numeroProducto = localStorage.getItem("numeroCarrito")
     
-    productNumbers = parseInt(productNumbers)
+    numeroProducto = parseInt(numeroProducto)
 
-    if (productNumbers){
+    if (numeroProducto){
 
-        localStorage.setItem("cartNumbers", productNumbers + 1);
-        document.querySelector(".icono-carrito span").textContent = productNumbers + 1;
+        localStorage.setItem("numeroCarrito", numeroProducto + 1);
+        document.querySelector(".icono-carrito span").textContent = numeroProducto + 1;
     } else { 
-        localStorage.setItem("cartNumbers", 1);
+        localStorage.setItem("numeroCarrito", 1);
         document.querySelector(".icono-carrito span").textContent = 1;
     }
     
@@ -88,7 +90,7 @@ function cartNumbers(producto) {
 }
 
 function setItems(producto){
-    let itemsCarrito = localStorage.getItem("productosEnCarrito")
+    let itemsCarrito = localStorage.getItem('productosEnCarrito')
     itemsCarrito = JSON.parse(itemsCarrito)
 
     if(itemsCarrito != null){
@@ -113,31 +115,68 @@ function setItems(producto){
     
 
     
-    localStorage.setItem("productosEnCarrito", JSON.stringify(itemsCarrito) )
+    localStorage.setItem("productosEnCarrito", JSON.stringify(itemsCarrito));
 }
 
 function costoTotalCarrito(producto) {
-    console.log("El costo del productos es", producto.precio);
-    let costoCarrito = localStorage.getItem("costoTotalCarrito")
+    
+    let costoCarrito = localStorage.getItem('costoTotalCarrito')
     
     
 
     if(costoCarrito != null){
-        costoCarrito = parseInt(costoCarrito)
-        localStorage.setItem("costoTotalCarrito", costoCarrito + producto.precio)
-        console.log("cuando clickeo el mismo")
+        costoCarrito = parseInt(costoCarrito);
+        localStorage.setItem("costoTotalCarrito", costoCarrito + producto.precio)        
 
     } else {
-        localStorage.setItem("costoTotalCarrito", producto.precio)
-        console.log("segunda parte")
+        localStorage.setItem("costoTotalCarrito", producto.precio)          
     }
-    console.log("el costo del carrito es", costoCarrito)
+    
 
     
 
 }
 
+function displayCarrito() {
+    let itemsCarrito = localStorage.getItem("productosEnCarrito");
+    itemsCarrito = JSON.parse(itemsCarrito);
+    let contenedorProductos = document.querySelector(".main-productos-carrito");
+    let costoCarrito = localStorage.getItem('costoTotalCarrito')
+    
+
+    if(itemsCarrito && contenedorProductos) {
+        contenedorProductos.innerHTML = '';
+        Object.values(itemsCarrito).map(producto => {
+            contenedorProductos.innerHTML += `<div class="card">
+            <i class="fas fa-times-circle"></i>
+            <img src="${producto.img}" title="imagen-producto"/>
+            <h3> Producto: ${producto.nombre}</h3>
+            <p> Precio: $${producto.precio}</p>
+            <i class="fas fa-minus-circle"></i> <p> Cantidad: ${producto.enCarrito}</p> <i class="fas fa-plus-circle"></i>
+            <p> Total: $${producto.enCarrito * producto.precio} </p>
+            </div>`
+        })
+
+        contenedorProductos.innerHTML += `
+        <div class="totalCarrito">
+         <h4 class="totalCarritoTitulo">
+           Total de tu carrito $ </h4>
+           <h4 class="totalCarritoNumero">
+           ${costoCarrito} </h4></div>`
 
 
-onLoadCartNumbers();
+
+    }
+
+
+
+
+
+
+}
+
+
+
+numeroCarritoEnCarga();
+displayCarrito();
 

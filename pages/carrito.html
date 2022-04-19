@@ -29,8 +29,8 @@
         <li>
           <a href="/pages/ingreso.html"><i class="fas fa-user-circle fa-2x"></i></a>
         </li>
-        <li>
-          <a href="/pages/carrito.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        <li class="icono-carrito">
+          <a href="/pages/carrito.html"><i class="fas fa-shopping-cart fa-2x"></i><span>0</span></a>
         </li>
       </ul>
     </div>
@@ -57,63 +57,27 @@
     </nav>
   </header>
 
+
+  
+
   <div class="content content-productos">
-    <main class="main-productos">
-      <div class="imagenes">
-        <img src="/img/productos/carcasa-silicone-case-iphone-12-mini.jpg" alt="1" />
-        <h3 id="producto1">Carcasa Silicona Iphone 12 Mini - Blue Navy</h3>
-        <p id="precio1">$ 1099</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/carcasa-silicone-case-iphone-se-2020-amarillo.jpg" alt="2" />
-        <h3 id="producto2">Carcasa Silicona Iphone SE 2020 - Yellow</h3>
-        <p id="precio2">$ 990</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/carcasa-silicone-case-iphone-x-sandia.png" alt="3" />
-        <h3 id="producto3">Cascasa Silicona Iphone X - Sandia</h3>
-        <p id="precio3">$ 880</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/auriculares-lightning-iphone.jpg" alt="4" />
-        <h3 id="producto4">Auriculares Iphone Lightning conector</h3>
-        <p id="precio4">$ 710</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/air-pods-iphone.jpg" alt="5" />
-        <h3 id="producto5">AirPods (2nd generation)</h3>
-        <p id="precio5">$ 5.540</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/vidrio-templado-iphone.jpg" alt="6" />
-        <h3 id="producto6">Vidrio templado Iphone 11</h3>
-        <p id="precio6">$ 190</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/adaptador-cargador-iphone.jpg" alt="7" />
-        <h3 id="producto7">Adaptador 20W entrada USB-C</h3>
-        <p id="precio7">$ 1100</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/cable-cargador-1mt-usbc.jpg" alt="7" />
-        <h3 id="producto8">Cable cargador USB-C a Lightning de 1 metro</h3>
-        <p id="precio8">$ 650</p>
-        <button>Agregar</button>
-      </div>
-      <div class="imagenes">
-        <img src="/img/productos/cable-cargador-2mt-USB.jpg" alt="7" />
-        <h3 id="producto9">Cable cargador USB a Lightning de 2 metros</h3>
-        <p id="precio9">$ 720</p>
-        <button>Agregar</button>
-      </div>
+    <main class="main-productos-carrito">
+      <h2>Aquí va a aparecer lo que vayas agregando al carrito, ve a la página de productos</h2>
+
+
+
+
+
     </main>
+
+
+    
+
+
+
+
+
+
     <div class="sidebar">
       <aside>
         <h3>Categorias</h3>
@@ -133,6 +97,10 @@
         </ul>
       </aside>
     </div>
+  </div>
+
+  <div class="total-del-carrito">
+
   </div>
 
   <footer>
@@ -171,7 +139,8 @@
       <p>&copyMercado Rey - 2021 - Montevideo, Uruguay</p>
     </div>
   </footer>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/script2.js"></script>
 
 
