@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "nombre": "Carcasa Silicona Iphone 12 Mini - Blue Navy",
+        "stock": 50,
+        "precio": 1099,
+        "descuento": 0.80,
+        "categoria": "Carcasas",
+        "img": "../img/productos/carcasa-silicone-case-iphone-12-mini.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 2,
+        "nombre": "Carcasa Silicona Iphone SE 2020 - Yellow",
+        "stock": 50,
+        "precio": 990,
+        "descuento": 0.80,
+        "categoria": "Carcasas",
+        "img": "../img/productos/carcasa-silicone-case-iphone-se-2020-amarillo.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 3,
+        "nombre": "Cascasa Silicona Iphone X - Sandia",
+        "stock": 50,
+        "precio": 880,
+        "descuento": 0.80,
+        "categoria": "Carcasas",
+        "img": "../img/productos/carcasa-silicone-case-iphone-x-sandia.png",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 4,
+        "nombre": "Auriculares Iphone Lightning conector",
+        "stock": 50,
+        "precio": 710,
+        "descuento": 0.85,
+        "categoria": "Auriculares",
+        "img": "../img/productos/auriculares-lightning-iphone.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 5,
+        "nombre": "AirPods (2nd generation)",
+        "stock": 50,
+        "precio": 5540,
+        "descuento": 0.95,
+        "categoria": "Auriculares",
+        "img": "../img/productos/air-pods-iphone.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 6,
+        "nombre": "Vidrio templado Iphone 11",
+        "stock": 50,
+        "precio": 190,
+        "descuento": 0.90,
+        "categoria": "Vidrios",
+        "img": "../img/productos/vidrio-templado-iphone.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 7,
+        "nombre": "Adaptador 20W entrada USB-C",
+        "stock": 50,
+        "precio": 1100,
+        "descuento": 0.90,
+        "categoria": "Cargadores",
+        "img": "../img/productos/adaptador-cargador-iphone.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 8,
+        "nombre": "Cable cargador USB-C a Lightning de 1 metro",
+        "stock": 50,
+        "precio": 650,
+        "descuento": 0.90,
+        "categoria": "Cargadores",
+        "img": "../img/productos/cable-cargador-1mt-usbc.jpg",
+        "enCarrito": 0
+        
+        
+
+    },
+    {
+        "id": 9,
+        "nombre": "Cable cargador USB a Lightning de 2 metros",
+        "stock": 50,
+        "precio": 720,
+        "descuento": 0.90,
+        "catego'ria": "Cargadores",
+        "img": "../img/productos/cable-cargador-2mt-USB.jpg",
+        "enCarrito": 0
+        
+        
+
+    }
+]

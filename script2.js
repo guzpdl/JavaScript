@@ -22,10 +22,51 @@ const producto5 = new Producto(5, "AirPods (2nd generation)", 50, 5540, 0.95, "A
 const producto6 = new Producto(6, "Vidrio templado Iphone 11", 50, 190, 1, "Vidrios", "../img/productos/vidrio-templado-iphone.jpg", 0)
 const producto7 = new Producto(7, "Adaptador 20W entrada USB-C", 50, 1100, 0.90, "Cargadores", "../img/productos/adaptador-cargador-iphone.jpg", 0)
 const producto8 = new Producto(8, "Cable cargador USB-C a Lightning de 1 metro", 50, 650, 0.90, "Cargadores", "../img/productos/cable-cargador-1mt-usbc.jpg", 0)
-const producto9 = new Producto(9, "Cable cargador USB a Lightning de 2 metros", 50, 720, 0.90, "Cargadores", '../img/productos/cable-cargador-2mt-USB.jpg', 0)
+const producto9 = new Producto(9, "Cable cargador USB a Lightning de 2 metros", 50, 720, 0.90, "Cargadores", "../img/productos/cable-cargador-2mt-USB.jpg", 0)
 
 
 const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9]
+
+const listaProductos = []
+
+
+fetch("../data.json")
+    .then((resp) => resp.json())
+    .then((data) => data.forEach((producto) =>
+                                listaProductos.push(new Producto(producto.id, producto.nombre, producto.stock, producto.precio, producto.descuento, producto.categoria, producto.img, producto.enCarrito))))
+
+
+
+const divItems = document.getElementById('items');
+
+function displayProductos(){
+
+    const miNodo = document.createElement('div');
+    const miNodoCardBody = document.createElement('div');
+    const card =  document.createElement('div');
+
+
+
+    
+
+    for(const producto of listaProductos) {
+
+    miNodo.innerHTML += `
+    <div class="imagenes">
+    <img src="${producto.img}" alt="1" />
+    <h3 id="producto1">${producto.nombre}</h3>
+    <p id="precio1">${producto.precio}</p>
+    <button class="anadir-carrito">Agregar</button>
+    </div>`
+
+    miNodoCardBody.appendChild(card);                            
+    DOMitems.appendChild(miNodo)
+    }
+}
+displayProductos();
+
+
+
 
 
 
@@ -179,4 +220,5 @@ function displayCarrito() {
 
 numeroCarritoEnCarga();
 displayCarrito();
+
 
